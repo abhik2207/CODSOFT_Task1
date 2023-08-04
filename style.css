@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=REM&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+}
+
+.back-video {
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100vh;
+    }
+}
+
+nav {
+    height: 8vh;
+    width: 100vw;
+    /* background-color: lightskyblue; */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .left-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.left-nav .nav-links {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-family: 'REM', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-links a:hover {
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.nav-logo img {
+    width: 200px;
+    border-right: 1px solid #FFFFFF;
+    padding-right: 10px;
+}
+
+.nav-logo img:hover {
+    filter: drop-shadow(0px 0px 10px #ff9100);
+    cursor: pointer;
+}
+
+.nav-buttons {
+    margin-right: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons button {
+    outline: 0;
+    border: 3px solid #ffffff00;
+    color: #FFFFFF;
+    background: transparent;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: grab;
+    transition: 0.6s;
+    font-family: 'REM', sans-serif;
+}
+
+.nav-buttons button:hover {
+    border: 3px solid #FFFFFF;
+}
+
+.nav-buttons button:active {
+    cursor: grabbing;
+}
+
+main {
+    height: 84vh;
+    width: 100vw;
+    /* background-color: #000000; */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .main-description {
+    background-color: rgba(255, 255, 255, 0.123);
+    height: 140px;
+    width: 300px;
+    padding: 10px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    align-items: center;
+    transform: translateX(100%);
+    animation-name: show;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: 0.5s;
+}
+
+main .main-description:hover {
+    background-color: rgba(255, 255, 255, 0.308);
+}
+
+@keyframes show {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+main .main-description p {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+main .headings {
+    font-size: 4rem;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+.headings .content {
+    /* border: 1px solid red; */
+    overflow: hidden;
+}
+
+.headings .content h1 {
+    transform: translateY(-100%);
+    animation-name: popup;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes popup {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.content #first-line {
+    font-family: 'REM', sans-serif;
+}
+
+.content #second-line {
+    font-family: 'Kalam', cursive;
+    text-indent: 500px;
+}
+
+footer {
+    height: 8vh;
+    width: 100vw;
+    /* background-color: lightgreen; */
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .left-foot {
+    margin-left: 10px;
+}
+
+.left-foot p {
+    border-left: 2px solid #FFFFFF;
+    border-right: 2px solid #FFFFFF;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding: 5px;
+    color: #FFFFFF;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.left-foot p:hover {
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.center-foot img {
+    width: 150px;
+    opacity: 0.5;
+}
+
+.center-foot img:hover {
+    opacity: 1;
+}
+
+footer .right-foot {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.right-foot button {
+    border: 2px solid #FFFFFF;
+    background: transparent;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-family: 'REM', sans-serif;
+    transition: 0.6s;
+    border-radius: 3px;
+}
+
+.right-foot button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
